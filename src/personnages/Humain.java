@@ -35,7 +35,7 @@ public class Humain {
 			argent -= prix;
 			parler("j'ai " + argentancien + " sous en poche .Je vais pouvoir m'offrir " + bien + " a " + prix + " sous ");
 		} else {
-			parler("Je n'ai plus que " + argentancien + " sous en poche. Je ne peux même pas m'offrir " + bien + " à "
+			parler("Je n'ai plus que " + argentancien + " sous en poche. Je ne peux même pas m'offrir " + bien + " a� "
 					+ prix + " sous.");
 		}
 
