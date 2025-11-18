@@ -1,0 +1,59 @@
+package personnages;
+
+public class Humain {
+	private String nom;
+	private String boissonFavorite;
+	private int argent;
+
+	public Humain(String nom, String boissonFavorite, int argent) {
+		super();
+		this.nom = nom;
+		this.boissonFavorite = boissonFavorite;
+		this.argent = argent;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public int getArgent() {
+		return argent;
+	}
+
+	public void direBonjour() {
+
+		parler("Bonjour ! Je m'appele " + nom + " et j'aime boire du " + boissonFavorite);
+	}
+
+	public void boire() {
+		parler("Mmmm," + " un bon verre de " + boissonFavorite + "!GLOUPS!");
+
+	}
+
+	public void acheter(String bien, int prix) {
+		int argentancien=argent;
+		if (argent >= prix) {
+			argent -= prix;
+			parler("j'ai " + argentancien + " sous en poche .Je vais pouvoir m'offrir " + bien + " a " + prix + " sous ");
+		} else {
+			parler("Je n'ai plus que " + argentancien + " sous en poche. Je ne peux même pas m'offrir " + bien + " à "
+					+ prix + " sous.");
+		}
+
+	}
+
+	private void gagnerArgent(int argentgagne) {
+		argent += argentgagne;
+	}
+
+	private void perdreArgent(int argentperdu) {
+		argent -= argentperdu;
+
+	}
+
+	private void parler(String texte) {
+		System.out.println("(" + nom + " )-" + texte);
+
+	}
+
+}
